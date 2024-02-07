@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    gap: 5px;
+    
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-areas:
+        'nav nav nav nav nav'
+        'aside section  section section section'
+        'aside section  section section section'
+        'footer footer footer footer footer'
+}
+
+section {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-items: center;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: #cced7a;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+   
+}
+
+.card:hover {
+    transform: translate(10px);
+    transition: all 2s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 20)
+    
+}
+
+footer {
+    background-color: #000000;
+    grid-area: footer;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cced7a;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+li:hover {
+    transition: 0.5s;
+    color: #ea2107;
+    cursor: pointer;
+}
+
+.card img {
+
+    width: 100%;
+    height: auto;
+    border-radius: 999px;
+    object-fit: cover;
+
+}
+
+aside {
+    grid-area: aside;
+    background-image: url(../img/noche.png.jpg);
+    padding-left: 10px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #f2eded;
+
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    list-style-position: initial;
+    padding: 10px;
+    padding-top: 20px;
+    font-family: inherit;
+
+}
+
+aside li {
+    font-weight: lighter;
+}
+
+
+button {
+    border-radius: 8px;
+    padding: 5px 10px;
+    width: 40%;
+    font-size: 16px;
+    background-color: #082fee;
+    cursor: pointer;
+    color: white;
+    
+}
+
+button:hover {
+    background-color: #fcf7f7;
+    color: #082fee;
+    font-size: 20px;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
+
+p {
+    padding-bottom: 20px;
+    font-weight: 300;
+    font-size: 30px;
+    color: #eb0c0c;
+}
